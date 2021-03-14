@@ -9,7 +9,9 @@
 #imports
 
 import csv
-with open('budget_data.csv')as file:
-    reader=csv.reader(file)
-    
-    count=0
+import os
+with open('budget_data.csv') as csv_file:
+   csv_reader=csv.reader(csv_file)
+
+   for line in csv_reader:
+        print(line)
