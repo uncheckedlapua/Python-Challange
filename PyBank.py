@@ -1,17 +1,19 @@
-#Objectives!!!!!
-# Create a Python script that analyzes the PyBank records to calculate each of the following:
-# -->>  The total number of months included in the dataset
-# -->>  The net total amount of "Profit/Losses" over the entire period
-# -->>  The average of the changes in "Profit/Losses" over the entire period
-# -->>  The greatest increase in profits (date and amount) over the entire period
-# -->>  The greatest decrease in losses (date and amount) over the entire period
-# -->>  Print the analysis to the terminal and export a text file with the results
-#imports
-
-import csv
+# Objective 1: Import modules os and csv
 import os
-with open('budget_data.csv') as csv_file:
-   csv_reader=csv.reader(csv_file)
+import csv
+# Objective 2: Set the path for the CSV file 
+PyBankcsv = os.path.join("budget_data.csv")
+# Objective 3: Create the lists to store data. 
+profit = []
+monthly_changes = []
+date = []
+# Initialize the variables as required.
+count = 0
+total_profit = 0
+total_change_profits = 0
+initial_profit = 0
+# Open the CSV
+with open(PyBankcsv, newline="") as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    csv_header = next(csvreader)
 
-   for line in csv_reader:
-        print(line)
