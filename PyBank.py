@@ -7,7 +7,7 @@ PyBankcsv = os.path.join("budget_data.csv")
 profit = []
 monthly_changes = []
 date = []
-# Initialize the variables as required.
+# Set variables.
 count = 0
 total_profit = 0
 total_change_profits = 0
